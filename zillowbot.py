@@ -82,7 +82,8 @@ class ZillowBot(Bot):
         print(f"{len(addresses)} addresses found.")
 
         # Combine the data into a dataframe and return it.
-        return pd.DataFrame({"Address": addresses, "Price": prices, "URL": urls})
+        return pd.DataFrame({"Address": addresses, "Price": prices,
+                             "URL": urls})
 
     def scrape_all_pages(self):
         pagenum_eles = self.get_pagenum_elements()

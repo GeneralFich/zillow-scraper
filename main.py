@@ -8,7 +8,8 @@ output_fname = "listings.xlsx"
 def main():
     zbot = ZillowBot(zillow_url)
     df = zbot.scrape_all_pages()
-    df.to_excel(output_fname, encoding="utf-8", sheet_name="listings")
+    df.to_excel(output_fname, encoding="utf-8", sheet_name="listings",
+                index=False)
     print(f"Excel file created: {output_fname}")
     zbot.quit()
 
